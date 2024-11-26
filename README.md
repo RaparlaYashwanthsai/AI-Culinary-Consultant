@@ -1,6 +1,7 @@
 Building an AI Culinary Consultant: AI as Your Sous Chef and Strategist
 
 In today's highly competitive food industry, cloud kitchens are redefining the dining experience. However, competing with established market players requires innovative tools that streamline operations and enhance decision-making. In this blog, we'll guide you through building an AI-Powered Culinary Assistant that generates recipes and provides pricing insights, empowering cloud kitchens to thrive in a competitive marketplace.
+
 ![eve4](https://github.com/user-attachments/assets/ad74c43d-6772-4043-92fc-c97a039985ca)
 
 Introduction | Overview
@@ -109,6 +110,7 @@ An input field for entering the ingredients.
 A button to trigger recipe generation.
 A section to display the generated recipe.
 A section for displaying the suggested price.
+
 ![eve 1](https://github.com/user-attachments/assets/ea1ed401-92b8-4fbf-99f5-ad5cc50e6d4e)
 
 Step 4: Running the Application
