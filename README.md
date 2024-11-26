@@ -1,6 +1,7 @@
 Building an AI Culinary Consultant: AI as Your Sous Chef and Strategist
 
 In today's highly competitive food industry, cloud kitchens are redefining the dining experience. However, competing with established market players requires innovative tools that streamline operations and enhance decision-making. In this blog, we'll guide you through building an AI-Powered Culinary Assistant that generates recipes and provides pricing insights, empowering cloud kitchens to thrive in a competitive marketplace.
+![eve4](https://github.com/user-attachments/assets/ad74c43d-6772-4043-92fc-c97a039985ca)
 
 Introduction | Overview
 Cloud kitchens operate in a unique environment where efficient management, cost control, and creativity are vital to success. Crafting competitive dishes and pricing them effectively can be overwhelming, especially for new entrants in the market.
