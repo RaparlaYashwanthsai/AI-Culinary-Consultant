@@ -112,6 +112,7 @@ A section for displaying the suggested price.
 ![eve 1](https://github.com/user-attachments/assets/ea1ed401-92b8-4fbf-99f5-ad5cc50e6d4e)
 
 Step 4: Running the Application
+
 1.Start the Server
 Run the server using Node.js:
   node server.js
