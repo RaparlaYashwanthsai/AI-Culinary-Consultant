@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Culinary Consultant</title>
+  <style>
+    /* General page styling */
+    body {
+      font-family: cursive;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Heading Styling */
+    #heading {
+      padding-top: 80px;
+      font-size: 40px;
+      padding-bottom: 30px;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Input field styling */
+    #ingredients {
+      width: 70%;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: left;
+      border-radius: 10px;
+      font-size: 15px;
+      border: 2px solid #ccc;
+      outline: none;
+    }
+
+    #ingredients:focus {
+      border-color: #4CAF50;
+    }
+
+    /* Button styling */
+    #generate-button {
+      width: 30%;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    #generate-button:hover {
+      background-color: #45a049;
+    }
+
+    /* Container Styling */
+    .container {
+      width: 80%;
+      max-width: 600px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    /* Output Text Styling */
+    #recipe, #price {
+      margin-top: 30px;
+      width: 70%;
+      text-align: justify;
+      font-size: 16px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Loading text styling */
+    #loading {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="heading">AI Culinary Consultant</h1>
+    <label for="ingredients">Enter ingredients (comma-separated):</label>
+    <input type="text" id="ingredients" placeholder="e.g., flour, sugar, eggs">
+    <button id="generate-button" onclick="generateRecipe()">Generate Recipe</button>
+
+    <!-- Loading text -->
+    <div id="loading" style="display: none;">Generating response...</div>
+
+    <h4>Generated Recipe:</h4>
+    <pre id="recipe"></pre>
+
+    <h4>Suggested Price:</h4>
+    <pre id="price"></pre>
+  </div>
+
+  <script>
+    async function generateRecipe() {
+      const ingredients = document.getElementById("ingredients").value;
+      const loadingText = document.getElementById("loading");
+      const recipeText = document.getElementById("recipe");
+      const priceText = document.getElementById("price");
+
+      loadingText.style.display = 'block';
+      recipeText.innerText = '';
+      priceText.innerText = '';
+
+      try {
+        const response = await fetch("/generate-recipe", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ingredients }),
+        });
+
+        const data = await response.json();
+        loadingText.style.display = 'none';
+        recipeText.innerText = data.recipe || "Error generating recipe.";
+        priceText.innerText = data.price || "Error generating price.";
+      } catch (error) {
+        loadingText.style.display = 'none';
+        recipeText.innerText = "Error generating recipe.";
+        priceText.innerText = "Error generating price.";
+        console.error("Error:", error);
+      }
+    }
+  </script>
+</body>
+
+</html>
