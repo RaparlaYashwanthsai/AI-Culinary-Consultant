@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 // Your API Key and model
-const genAI = new GoogleGenerativeAI("AIzaSyB2Z86D77mGsxT5Z4JCNJ_9IDAPXKRhFd4");
+const genAI = new GoogleGenerativeAI("API_KEY");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // API endpoint for generating recipes and prices
