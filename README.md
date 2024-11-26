@@ -119,8 +119,6 @@ Open your browser and go to http://localhost:3000.
 3. Test the App
 Enter ingredients (e.g., chicken, garlic, onions).
 View the generated recipe and price.
-![eve 2](https://github.com/user-attachments/assets/aa8e88c1-ce53-4d88-8375-93f8f47ae264)
-![eve 3](https://github.com/user-attachments/assets/1dacc48b-d0f0-4287-bbe3-0999820a2d21)
 
 Step 5: Troubleshooting Tips
 1.API Key Issues: Ensure your Google Cloud Project is set up correctly and the API key is active.
@@ -129,7 +127,8 @@ Step 5: Troubleshooting Tips
 
 Result
 By completing this project, you'll create an app like this:
-
+![eve 2](https://github.com/user-attachments/assets/aa8e88c1-ce53-4d88-8375-93f8f47ae264)
+![eve 3](https://github.com/user-attachments/assets/1dacc48b-d0f0-4287-bbe3-0999820a2d21)
 This tool empowers cloud kitchens to innovate recipes and align pricing with market standards, leveling the playing field against larger competitors.
 
 Call to action
